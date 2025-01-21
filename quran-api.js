@@ -1,6 +1,8 @@
 const selectedTranslation = document.querySelector("#translations")
 const translationContainer = document.querySelector(".translation-container")
-const translationNameContainer = document.querySelector(".translation-name")
+const translationNameContainer = document.querySelector(
+  ".translation-name-container"
+)
 function handleClick() {
   const selectedTranslationValue =
     selectedTranslation.options[selectedTranslation.selectedIndex].value
