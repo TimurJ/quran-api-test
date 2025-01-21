@@ -1,14 +1,9 @@
 const selectedTranslation = document.querySelector("#translations")
 const translationContainer = document.querySelector(".translation-container")
-const translationNameContainer = document.querySelector(
-  ".translation-name-container"
-)
+const translationNameContainer = document.querySelector(".translation-name-container")
 function handleClick() {
-  const selectedTranslationValue =
-    selectedTranslation.options[selectedTranslation.selectedIndex].value
-  const promise = fetch(
-    `https://api.alquran.cloud/v1/ayah/262/en.${selectedTranslationValue}`
-  )
+  const selectedTranslationValue = selectedTranslation.options[selectedTranslation.selectedIndex].value
+  const promise = fetch(`https://api.alquran.cloud/v1/ayah/262/en.${selectedTranslationValue}`)
 
   promise
     .then(function (response) {
@@ -23,9 +18,7 @@ function handleClick() {
 }
 
 function initialise() {
-  document
-    .querySelector(".ayatul-kursi-button")
-    .addEventListener("click", handleClick)
+  document.querySelector(".ayatul-kursi-button").addEventListener("click", handleClick)
 }
 
 initialise()
